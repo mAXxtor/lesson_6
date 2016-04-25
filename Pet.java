@@ -14,4 +14,10 @@ public interface Pet {
     * Имя питомца.
     */
 	String getName();
+
+    /**
+     * Set name of pet
+     * @param name of pet
+     */
+    void setName(final String name);
 }

@@ -30,4 +30,12 @@ public class Animal implements Pet {
         // TODO: 18.04.2016 добавить алгоритм вычисления состояния
         return true;
     }
+
+    /**
+     * Возвращает имя животного.
+     * @return имя животного
+     */
+    public String getName() {
+        return this.name;
+    }
 }

@@ -6,12 +6,16 @@
 public class Dog implements Pet {
 
     /**
-     * Базовая реализация питомца.
+     * Name of pet
      */
-    private final Pet pet;
+    private String name;
 
-    public Dog(final Pet pet) {
-        this.pet = pet;
+    /**
+     * Constructor
+     * @param name of pet
+     */
+    public Dog(final String name) {
+        this.name = name;
     }
 
     /**
@@ -19,8 +23,7 @@ public class Dog implements Pet {
      */
     @Override
     public void makeSound() {
-        this.pet.makeSound();
-        System.out.println("Gav, Gav");
+        System.out.println("Gav!");
     }
 
     /**
@@ -28,6 +31,11 @@ public class Dog implements Pet {
      */
     @Override
     public String getName() {
-        return this.pet.getName();
+        return this.name();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -3,20 +3,18 @@
  * @author mAXxtor
  * @since 18.04.2016
  */
-public class Cat extends Animal {
+public class Cat extends Pet {
+    /**
+     * Name of pet
+     */
+    private String name;
 
     /**
-     * Конструктор.
-     * @param name Имя животного
+     * Constructor
+     * @param name of pet
      */
     public Cat(final String name) {
-        super(name);
-    }
-
-    /**
-     * Поймать мышь.
-     */
-    public void catchMouse() {
+        this.name = name;
     }
 
     /**
@@ -24,6 +22,16 @@ public class Cat extends Animal {
      */
     @Override
     public void makeSound() {
-        System.out.println(String.format("May %s", this.getName()));
+        System.out.println("May!");
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }
