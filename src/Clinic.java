@@ -1,3 +1,4 @@
+
 /**
  * Created by mAXxtor on 25.04.2016
  * Represent clinic for pets.
@@ -96,6 +97,13 @@ public class Clinic {
         for (int i = 0; i < this.clients.length; i++) {
             if (this.clients[i] != null && this.clients[i].getId().equals(id)) {
                 numOfClients++;
+            }
+        }
+        Client[] result = new Client[numOfClients];
+        int counter = 0;
+        for (int i = 0; i < this.clients.length; i++) {
+            if (this.clients[i] != null && this.clients[i].getId().equals(id)) {
+                result[counter++] = this.clients[i];
             }
         }
         return result;

@@ -1,9 +1,10 @@
 /**
- * Реализация кота. Он умеет мяукать и ловить мышей.
+ * Реализация собаки.
  * @author mAXxtor
  * @since 18.04.2016
  */
-public class Cat extends Pet {
+public class Dog implements Pet {
+
     /**
      * Name of pet
      */
@@ -13,18 +14,21 @@ public class Cat extends Pet {
      * Constructor
      * @param name of pet
      */
-    public Cat(final String name) {
+    public Dog(final String name) {
         this.name = name;
     }
 
     /**
-     * (@inheritDoc)
+     * (inheritDoc)
      */
     @Override
     public void makeSound() {
-        System.out.println("May!");
+        System.out.println("Gav!");
     }
 
+    /**
+     * (inheritDoc)
+     */
     @Override
     public String getName() {
         return this.name;
